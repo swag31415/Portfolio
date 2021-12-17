@@ -4,7 +4,8 @@ const pages = [
   'https://swag31415.github.io/CoderArt/',
   'https://swag31415.github.io/ChessMove/',
   'https://swag31415.github.io/Hangman-JS/',
-  'https://swag31415.github.io/TheGame/'
+  'https://swag31415.github.io/TheGame/',
+  'https://swag31415.github.io/Sorter/'
 ]
 
 function get_card(page_link, image_link, title, desc) {
