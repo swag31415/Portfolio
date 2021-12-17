@@ -1,0 +1,40 @@
+.masonry { /* Masonry container */
+  column-count: 1;
+  column-gap: 1em;
+}
+
+.masonry > * { /* Masonry bricks or child elements */
+  display: inline-block;
+  width: 100%;
+}
+
+/* This is based on Materialize screen sizes */
+.masonry.ms2 { column-count: 2; }
+.masonry.ms3 { column-count: 3; }
+.masonry.ms4 { column-count: 4; }
+.masonry.ms5 { column-count: 5; }
+.masonry.ms6 { column-count: 6; }
+
+@media screen and (min-width: 600px) {
+  .masonry.mm2 { column-count: 2; }
+  .masonry.mm3 { column-count: 3; }
+  .masonry.mm4 { column-count: 4; }
+  .masonry.mm5 { column-count: 5; }
+  .masonry.mm6 { column-count: 6; }
+}
+
+@media screen and (min-width: 992px) {
+  .masonry.ml2 { column-count: 2; }
+  .masonry.ml3 { column-count: 3; }
+  .masonry.ml4 { column-count: 4; }
+  .masonry.ml5 { column-count: 5; }
+  .masonry.ml6 { column-count: 6; }
+}
+
+@media screen and (min-width: 1200px) {
+  .masonry.mxl2 { column-count: 2; }
+  .masonry.mxl3 { column-count: 3; }
+  .masonry.mxl4 { column-count: 4; }
+  .masonry.mxl5 { column-count: 5; }
+  .masonry.mxl6 { column-count: 6; }
+}

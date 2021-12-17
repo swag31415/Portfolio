@@ -1,5 +1,6 @@
 const pages = [
-  'https://swag31415.github.io/kirtan/'
+  'https://swag31415.github.io/kirtan/',
+  'https://swag31415.github.io/Jugs-Web/'
 ]
 
 function get_card(page_link, image_link, title, desc) {
