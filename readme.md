@@ -1,6 +1,8 @@
 # portfolio
 Like a v2 of [swag_site](https://github.com/swag31415/swag-site)
 
+See it live [here](https://swag31415.github.io/Portfolio/)
+
 ## Usage
 Just open `index.html`
 
