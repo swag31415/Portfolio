@@ -10,6 +10,15 @@ const pages = [
   'https://swag31415.github.io/Helpful/'
 ]
 
+const cards = [
+  {
+    title: 'Kirtan Atlanta',
+    desc: 'The central hub for all things Kirtan',
+    page_link: 'https://kirtanatlanta.com/',
+    image_link: 'https://kirtanatlanta.com/assets/logo.png'
+  }
+]
+
 function get_card(page_link, image_link, title, desc) {
   return `
   <div class="card blue-grey darken-4">
@@ -31,6 +40,11 @@ pages.forEach(async url => {
     if (!resp.ok) throw new Error('Error getting ' + url + 'desc.json')
     let data = JSON.parse(await resp.text())
     let card = get_card(url, url + data.image, data.name, data.desc)
-    document.getElementById('cards').insertAdjacentHTML('beforeend', card)
+    document.getElementById('cards').insertAdjacentHTML('afterbegin', card)
   } catch (err) { console.error(err) }
+})
+
+cards.forEach(data => {
+  let card = get_card(data.page_link, data.image_link, data.title, data.desc)
+  document.getElementById('cards').insertAdjacentHTML('beforeend', card)
 })
