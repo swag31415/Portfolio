@@ -1,14 +1,19 @@
-const pages = [
-  'https://swag31415.github.io/kirtan/',
-  'https://swag31415.github.io/Jugs-Web/',
-  'https://swag31415.github.io/CoderArt/',
-  'https://swag31415.github.io/ChessMove/',
-  'https://swag31415.github.io/Hangman-JS/',
-  'https://swag31415.github.io/TheGame/',
-  'https://swag31415.github.io/Sorter/',
-  'https://swag31415.github.io/Stonkey/',
-  'https://swag31415.github.io/Helpful/',
-  'https://swag31415.github.io/Txty/'
+const base_url = {
+  pages: 'https://swag31415.github.io/',
+  repo: 'https://github.com/swag31415/'
+}
+
+const repos = [
+  'kirtan',
+  'Jugs-Web',
+  'CoderArt',
+  'ChessMove',
+  'Hangman-JS',
+  'TheGame',
+  'Sorter',
+  'Stonkey',
+  'Helpful',
+  'Txty'
 ]
 
 const cards = [
@@ -16,11 +21,12 @@ const cards = [
     title: 'Kirtan Atlanta',
     desc: 'The central hub for all things Kirtan',
     page_link: 'https://kirtanatlanta.com/',
-    image_link: 'https://kirtanatlanta.com/assets/logo.png'
+    image_link: 'https://kirtanatlanta.com/assets/logo.png',
+    code_link: 'https://github.com/swag31415/kirtan-atlanta'
   }
 ]
 
-function get_card(page_link, image_link, title, desc) {
+function get_card(page_link, image_link, title, desc, code_link) {
   return `
   <div class="card blue-grey darken-4">
     <div class="card-image">
@@ -32,20 +38,24 @@ function get_card(page_link, image_link, title, desc) {
       <span class="card-title">${title}</span>
       <p>${desc}</p>
     </div>
+    <div class="card-action">
+      <a href=${code_link} class="white-text"><i class="fab fa-github"></i> See Code</a>
+    </div>
   </div>`
 }
 
-pages.forEach(async url => {
+repos.forEach(async name => {
+  let url = base_url['pages'] + name + '/'
   try {
     let resp = await fetch(url + 'desc.json')
     if (!resp.ok) throw new Error('Error getting ' + url + 'desc.json')
     let data = JSON.parse(await resp.text())
-    let card = get_card(url, url + data.image, data.name, data.desc)
+    let card = get_card(url, url + data.image, data.name, data.desc, base_url['repo'] + name + '/')
     document.getElementById('cards').insertAdjacentHTML('afterbegin', card)
   } catch (err) { console.error(err) }
 })
 
 cards.forEach(data => {
-  let card = get_card(data.page_link, data.image_link, data.title, data.desc)
+  let card = get_card(data.page_link, data.image_link, data.title, data.desc, data.code_link)
   document.getElementById('cards').insertAdjacentHTML('beforeend', card)
 })
