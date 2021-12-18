@@ -7,7 +7,8 @@ const pages = [
   'https://swag31415.github.io/TheGame/',
   'https://swag31415.github.io/Sorter/',
   'https://swag31415.github.io/Stonkey/',
-  'https://swag31415.github.io/Helpful/'
+  'https://swag31415.github.io/Helpful/',
+  'https://swag31415.github.io/Txty/'
 ]
 
 const cards = [
