@@ -13,7 +13,8 @@ const repos = [
   'Sorter',
   'Stonkey',
   'Helpful',
-  'Txty'
+  'Txty',
+  'Krishna-Compendium'
 ]
 
 const cards = [
