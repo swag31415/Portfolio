@@ -13,6 +13,24 @@ Just open `index.html`
       // Your code here
     })
   ```
+- Materialize's `M` is included in the `foot.html` insert. When it's ready it fires the `materialize-ready` event which you can listen for as follows
+  ```javascript
+  window.addEventListener('materialize-ready', function () {
+    // Your code here
+  })
+  ```
+  Since the event may have fired before your code has run you can use a Promise to cover all the cases
+  ```javascript
+  var m_ready = new Promise(res => {
+    if (typeof M == 'undefined') window.addEventListener('materialize-ready', () => res(true))
+    else res(true)
+  })
+
+  m_ready.then(() => {
+    // Your code here
+  })
+  ```
+  Feel free to use this construct for other inserts. **This one in particular is included in `html_inserts.js` for convenience**
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

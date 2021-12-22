@@ -10,5 +10,8 @@
   crossorigin="anonymous"></script>
 <script>
   // Initialize Materialize
-  window.addEventListener('load', function () { setTimeout(() => M.AutoInit(), 200) })
+  window.addEventListener('load', function () {
+    M.AutoInit()
+    window.dispatchEvent(new Event('materialize-ready'))
+  })
 </script>
