@@ -10,8 +10,12 @@
   crossorigin="anonymous"></script>
 <script>
   // Initialize Materialize
-  window.addEventListener('load', function () {
-    M.AutoInit()
-    window.dispatchEvent(new Event('materialize-ready'))
-  })
+  function rec_M_init() {
+    if (typeof M == 'undefined') setTimeout(rec_M_init, 100)
+    else {
+      M.AutoInit()
+      window.dispatchEvent(new Event('materialize-ready'))
+    }
+  }
+  window.addEventListener('load', rec_M_init)
 </script>
