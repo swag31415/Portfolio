@@ -11,11 +11,11 @@
 <script>
   // Initialize Materialize
   function rec_M_init() {
-    if (typeof M == 'undefined') setTimeout(rec_M_init, 100)
+    if (typeof M == 'undefined') setTimeout(rec_M_init, 200)
     else {
       M.AutoInit()
       window.dispatchEvent(new Event('materialize-ready'))
     }
   }
-  window.addEventListener('load', rec_M_init)
+  rec_M_init()
 </script>
