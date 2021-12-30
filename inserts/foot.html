@@ -4,6 +4,29 @@
     <a class="white-text right" href="https://github.com/swag31415">My Github</a>
   </div>
 </footer>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDX6GSS6lKTQedWnAEfLWx78zEtL__x7Cc",
+    authDomain: "swag-site-bc744.firebaseapp.com",
+    projectId: "swag-site-bc744",
+    storageBucket: "swag-site-bc744.appspot.com",
+    messagingSenderId: "402877506423",
+    appId: "1:402877506423:web:f2d4f93164d84399cbf772",
+    measurementId: "G-7FK3L4TZBG"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 <!-- Materialize JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
   integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
