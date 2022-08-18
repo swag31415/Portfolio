@@ -39,6 +39,7 @@ window.Firebase = {
     },
     user: function () {
       return auth.currentUser
+    }
   },
   firestore: {
     add: function (collection_name, data, doc_id) {
