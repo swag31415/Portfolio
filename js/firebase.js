@@ -36,7 +36,9 @@ window.Firebase = {
     },
     set_on_auth_change: function (func) {
       return onAuthStateChanged(auth, func)
-    }
+    },
+    user: function () {
+      return auth.currentUser
   },
   firestore: {
     add: function (collection_name, data, doc_id) {
