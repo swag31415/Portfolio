@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
-import { getFirestore, collection, doc, addDoc, getDoc, getDocs, setDoc, deleteDoc, updateDoc, query, where, orderBy, limit, startAt, endAt } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getFirestore, collection, doc, addDoc, getDoc, getDocs, setDoc, deleteDoc, updateDoc, query, where, orderBy, limit, startAt, endAt, getStorage, ref, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
 
 // Your web app's Firebase configuration
@@ -21,6 +21,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
 const analytics = getAnalytics(app);
+const storage = getStorage();
 
 // Export the good stuff
 window.Firebase = {
@@ -72,6 +73,14 @@ window.Firebase = {
   analytics: {
     log: function (event, params) {
       return logEvent(analytics, event, params)
+    }
+  },
+  storage: {
+    upload: function (path, thing) {
+      return uploadBytes(ref(storage, path), thing)
+    },
+    get_link: function (path) {
+      return getDownloadURL(ref(storage, path))
     }
   }
 }
