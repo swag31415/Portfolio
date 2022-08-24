@@ -14,7 +14,8 @@ const repos = [
   'Stonkey',
   'Helpful',
   'Txty',
-  'Krishna-Compendium'
+  'Krishna-Compendium',
+  'StoryTracker'
 ]
 
 const cards = [
