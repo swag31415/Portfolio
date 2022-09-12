@@ -15,7 +15,8 @@ const repos = [
   'Helpful',
   'Txty',
   'Krishna-Compendium',
-  'StoryTracker'
+  'StoryTracker',
+  'Sudoku'
 ]
 
 const cards = [
