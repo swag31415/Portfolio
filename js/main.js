@@ -16,7 +16,8 @@ const repos = [
   'Txty',
   'Krishna-Compendium',
   'StoryTracker',
-  'Sudoku'
+  'Sudoku',
+  'Spliner'
 ]
 
 const cards = [
