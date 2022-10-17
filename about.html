@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+  <title>About SwagSite</title>
+  <link rel="icon" href="swagsite.png" type="image/x-icon">
+  <!-- Our Styles -->
+  <link rel="stylesheet" href="css/fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <insert-html link="inserts/head.html"></insert-html>
+</head>
+
+<body>
+  <insert-html link="inserts/menu.html"></insert-html>
+  <main class="container">
+    <h1>About swag_site</h1>
+    <p class="flow-text">Welcome to the swag site! I hope you like it. Below is some info about it.</p>
+    <p class="flow-text teal-text">This was last updated on October 17, 2022</p>
+    <h2>Why's it called swag_site?</h2>
+    <div class="row">
+      <div class="col s12 m6">
+        <p class="flow-text">It's because my name's Swag! My full name is Swagatam Das, which means "welcome" in Hindi.</p>
+        <p class="flow-text"><a><i class="fa-brands fa-github"></i> My GitHub</a></p>
+        <p class="flow-text"><a><i class="fa-brands fa-linkedin"></i> My LinkedIn</a></p>
+      </div>
+      <img class="col s12 m6" src="./swag.png" alt="A picture of me on top of RedRocks should be here">        
+    </div>
+    <h2>Evolution of the SwagSite</h2>
+    <ul class="timeline">
+      <li class="flow-text">
+        <div>Github</div>
+        <p>SwagSite started out around late 2016 as just my Github page. At this point, I already had quite a few projects just stored locally on my laptop and wanted to make them accessible to people. I worked on cleaning them up as best I could to make them presentable and posted them all on Github.</p>
+        <p>This didn't actually go so well and I think I only ended up uploading like two projects. You can see a funny game I made called <a href="https://github.com/swag31415/Cookie-Collector">Cookie Collector</a> still on there. Nevertheless, it was an important starting point for me, and I added many more projects the next year.</p>
+      </li>
+      <li class="flow-text">
+        <div>The Old SwagSite</div>
+        <p>Around December 2020, near the end of my third semester in college, I realized I had far too many projects on GitHub for anyone to reasonably look through and find what they need. So far I'd been using the pinned projects list on my main page to showcase the ones I thought were important, but I felt like those short descriptions didn't do them justice.</p>
+        <p>I decided to have a website that served as my portfolio would be best. I got to work and in about four days I had a solid framework. I used skills I learned while making a chat app for my "Software Development Methods and Tools" course to put together a Node.js website hosted on Heroku.</p>
+        <p>The biggest challenge here was that a website ran on JavaScript and all my projects on GitHub were written in Nim, Java, C++, Python, etc. Thus the bulk of the work was converting the code to JS and building a user-friendly UI for each of them, which is something I'm still doing. There are nearly five times as many projects on my Github as on SwagSite.</p>
+      </li>
+      <li class="flow-text">
+        <div>The First Project: A need for Art</div>
+        <p>The first project on the SwagSite was actually a completely new project. I wanted to have beautiful art on my website, but I didn't want just to copy it off the internet. Of course, I'm not very artistically inclined, but I know how to code! Often times I look at art and I can immediately think of a way I'd code that style.</p>
+        <p>That's why I made <a href="https://swag31415.github.io/CoderArt/">CoderArt</a>! A way to code art using JavaScript. I used it to make every single piece of art on my website, and I make a bunch of art casually now too! <a href="https://www.colorado.edu/umc/sap/das">I even won an art competition at my college with a piece I made with it!</a></p>
+        <p>My favorite part about CoderArt is that because it is coded, I can reuse some of the code used in the project to make the artwork for the project, allowing the art to truly represent the code.</p>
+      </li>
+      <li class="flow-text">
+        <div>Helpful: A big Milestone</div>
+        <p>In late February of 2021 I started working on Helpful. I won't get into it's history here; You can read about it on <a href="https://swag31415.github.io/Helpful/">it's page</a>. Helpful was a big milestone for three reasons.</p>
+        <ul class="browser-default">
+          <li>It was the first project I did collaboratively on SwagSite and thus the first time other people really found out about SwagSite.</li>
+          <li><a href="https://www.reddit.com/r/InternetIsBeautiful/comments/mi6h9x/we_made_a_website_that_gives_you_life_advice_it/">It was posted on Reddit</a> and thousands of strangers from the internet visited SwagSite and used my projects. This meant a lot to me.</li>
+          <li>It was the most complex project by far and was the first to actually utilize the Node.js server SwagSite was hosted on.</li>
+        </ul>
+        <p>Overall I think the biggest transformation after Helpful is that SwagSite became less of a collection of projects, and more of an actual service. Many of my friends and a couple dozen strangers still regularly visit this site for life advice.</p>
+      </li>
+      <li class="flow-text">
+        <div>This!</div>
+        <p>Almost exactly a year after I started making the original SwagSite I began working on this, its replacement. Over its year of service, I noticed a few things I didn't like.</p>
+        <ul class="browser-default">
+          <li>Every project was in the same repo, which quickly became unmaintainably big.</li>
+          <li>Due to its size the server took longer and longer to start up, and thus serve pages.</li>
+          <li>Everything felt unprofessional and sluggish at times.</li>
+        </ul>
+        <p>The biggest problem for me was that most of the pages were static, so I didn't need the server for most of the time. I already was serving a static page very efficiently using Github Pages, <a href="https://swag31415.github.io/Txty/">Txty</a>.</p>
+        <p>I could make separate repos for each page on SwagSite and host them all separately on GitHub Pages. This made them all separate websites though and I wanted it to <span style='font-style: italic;'>feel</span> like one big website. This meant sharing things like a header and footer and styles across all the different pages.</p>
+        <p>Thats the problem <a href="https://swag31415.github.io/Portfolio/">Portfolio</a> solved. There was still the issue of some pages needing a backend, but for those I used cloud APIs where I could and serverless solutions like Firebase and Heroku workers when the APIs cost money. This entire site has a strict budget of $0, something that influenced many decisions.</p>
+        <p>Finally there was the challenge of actually moving everything over from the original SwagSite, a task I only finished recently.</p>
+      </li>
+    </ul>
+    <p class="flow-text">Overall, I love how SwagSite turned out, and I love how effortless it makes it to just work on my work and not have to worry about how to display it on my portfolio. It fills me with joy and satisfaction whenever I load the page and see the beautiful display of my artwork and code. I hope you enjoy your time here. Thank you.</p>
+  </main>
+  <insert-html link="inserts/foot.html"></insert-html>
+  <!-- HTML Inserts -->
+  <script src="js/html_inserts.js"></script>
+</body>
+
+</html>
