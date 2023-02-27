@@ -4,6 +4,7 @@ const base_url = {
 }
 
 const repos = [
+  'SuperLottery',
   'kirtan',
   'Jugs-Web',
   'CoderArt',
